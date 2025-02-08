@@ -1,69 +1,41 @@
 Trello Clone
-
 This is a Trello-like board application built using Next.js and React, allowing users to manage tasks by adding, editing, deleting, and rearranging task cards within multiple lists.
 
-🚀 Getting Started
+Prerequisites
+Ensure you have the following installed on your system:
+Node.js (Latest LTS recommended)
+Git
 
-1️⃣ Clone the Repository
+Clone the Project:
+To get a copy of the project, run the following command:
+git clone https://github.com/your-username/Trello_Project_.git
 
-git clone https://github.com/rashmi1-patle/Trello_Project_.git
-
-2️⃣ Navigate to the Project Directory
-
+Navigate to Project Directory
 cd Trello_Project_/trello-clone
 
-3️⃣ Install Dependencies
-
+Install Dependencies
+Run the following command to install required dependencies:
 npm install
 
-4️⃣ Start the Development Server
-
+Run the Development Server
+Start the application in development mode:
 npm run dev
 
-After running this command, the project will be available at:
+If you face issues running the command, try:
+npx next dev
 
-Local: http://localhost:3000
+The application should now be accessible at:
+http://localhost:3000
 
-Network: Shown in the terminal
-
-📦 Build for Production
-
-To create a production build, run:
-
+Build for Production
+To create an optimized production build, run:
 npm run build
+
+After building, start the production server with:
 npm start
 
-🔧 Common Issues & Fixes
-
-❌ Port 3000 is Already in Use
-
-If you see an error like EADDRINUSE: address already in use :::3000, kill the process using:
-
-npx kill-port 3000
-npm start
-
-Or manually stop it:
-
-netstat -ano | findstr :3000  # Find the process ID (PID)
-taskkill /PID <PID> /F        # Replace <PID> with the actual process ID
-
-❌ Missing .next Folder
-
-If you see an error like Could not find a production build in the '.next' directory, build the project first:
-
-npm run build
-npm start
-
-❌ Modules Not Found
-
-If you face dependency issues, delete and reinstall modules:
-
-rm -rf node_modules package-lock.json
+Troubleshooting
+If npm run dev fails with a missing next error, reinstall dependencies:
 npm install
-
-🎯 Features
-
-✅ Drag-and-drop task management
-✅ Add, edit, delete task cards
-✅ Reorder tasks within lists
-✅ Responsive UI built with Next.js & React
+Ensure no other processes are using port 3000.
+If ESLint errors occur during build, review the errors and fix them in the code.
